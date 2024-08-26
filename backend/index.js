@@ -8,7 +8,12 @@ const ImageModel = require('./models/image')
 
 const app = express()
 app.use(express.json())
-app.use(cors())
+app.use(cors( {
+    origin:['http://localhost:3000',""],
+    methods:["POST","GET"],
+    credentials:true,
+    optionsSuccessStatus:200
+}))
 app.use(express.static('public'))
 
 
