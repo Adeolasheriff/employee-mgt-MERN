@@ -13,7 +13,7 @@ export default function Detail() {
 
 
     useEffect(()=>{
-      axios.get('http://localhost:8080/getuser/'+id)
+      axios.get('https://employee-mern-apiii.vercel.app/getuser/'+id)
       .then(result => {
         console.log(result)
         setName(result.data.name)

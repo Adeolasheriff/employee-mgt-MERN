@@ -11,7 +11,8 @@ export default function Signup() {
 
     const handleSubmit = ((e)=> {
          e.preventDefault();
-         axios.post('http://localhost:8080/register',{name,email,password})
+         // axios.post('http://localhost:8080/register',{name,email,password})
+         axios.post('https://employee-mern-apiii.vercel.app/register',{name,email,password})
           .then(res => {console.log(res)
             navigate('/')
              })
