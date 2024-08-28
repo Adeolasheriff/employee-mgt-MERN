@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import {  Link, useNavigate, useParams } from 'react-router-dom';
+import {  Link,  useParams } from 'react-router-dom';
 
 
 export default function Detail() {
@@ -22,7 +22,7 @@ export default function Detail() {
         setCity(result.data.city)
       })
       .catch(err => console.log(err))
-    },[])
+    },[id])
     // const handleUpdate = ((e)=> {
     //      e.preventDefault();
     //      axios.put('http://localhost:8080/update/' +id,{name,email,age,city})

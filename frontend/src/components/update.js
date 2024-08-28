@@ -22,7 +22,7 @@ export default function Update() {
         setCity(result.data.city)
       })
       .catch(err => console.log(err))
-    },[])
+    },[id])
 
     const handleUpdate = ((e)=> {
          e.preventDefault();
