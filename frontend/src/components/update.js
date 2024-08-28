@@ -13,7 +13,7 @@ export default function Update() {
 
 
     useEffect(()=>{
-      axios.get('http://localhost:8080/getuser/'+id)
+      axios.get('https://employee-mern-apiii.vercel.app/getuser/'+id)
       .then(result => {
         console.log(result)
         setName(result.data.name)
@@ -23,10 +23,10 @@ export default function Update() {
       })
       .catch(err => console.log(err))
     },[])
-    
+
     const handleUpdate = ((e)=> {
          e.preventDefault();
-         axios.put('http://localhost:8080/update/' +id,{name,email,age,city})
+         axios.put('https://employee-mern-apiii.vercel.app/update/' +id,{name,email,age,city})
           .then(res => {
             console.log(res)
             navigate('/home')
