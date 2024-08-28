@@ -23,6 +23,7 @@ export default function Update() {
       })
       .catch(err => console.log(err))
     },[])
+    
     const handleUpdate = ((e)=> {
          e.preventDefault();
          axios.put('http://localhost:8080/update/' +id,{name,email,age,city})

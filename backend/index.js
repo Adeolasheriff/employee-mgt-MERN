@@ -9,7 +9,7 @@ const ImageModel = require('./models/image')
 const app = express()
 app.use(express.json())
 app.use(cors( {
-    origin:['http://localhost:3000',""],
+    origin:['http://localhost:3000',"https://employee-mern-frontend-mu.vercel.app"],
     methods:["POST","GET"],
     credentials:true,
     optionsSuccessStatus:200
@@ -20,7 +20,7 @@ app.use(express.static('public'))
 // mongoose.connect('mongodb://localhost:27017/employee')
 
 // mongoose.connect("mongodb+srv://sheriff:Kolawole101@cluster0.d2dpt.mongodb.net/employee")
-mongoose.connect('mongodb+srv://sheriff:Kolawole101@cluster0.d2dpt.mongodb.net/employee?retryWrites=true&w=majority&appName=Cluster0')
+  mongoose.connect('mongodb+srv://sheriff:Kolawole101@cluster0.d2dpt.mongodb.net/employee?retryWrites=true&w=majority&appName=Cluster0')
 
 //uploading images
 const store = multer.diskStorage({
