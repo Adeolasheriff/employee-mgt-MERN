@@ -20,7 +20,7 @@ app.use(express.static('public'))
 // mongoose.connect('mongodb://localhost:27017/employee')
 
 // mongoose.connect("mongodb+srv://sheriff:Kolawole101@cluster0.d2dpt.mongodb.net/employee")
-mongoose.connect('mongodb+srv://sheriff:<db_password>@cluster0.d2dpt.mongodb.net/employee?retryWrites=true&w=majority&appName=Cluster0')
+mongoose.connect('mongodb+srv://sheriff:Kolawole101@cluster0.d2dpt.mongodb.net/employee?retryWrites=true&w=majority&appName=Cluster0')
 
 //uploading images
 const store = multer.diskStorage({
